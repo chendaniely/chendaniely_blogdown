@@ -8,20 +8,25 @@
   url = "#about"
   weight = 10
 
+# [[main]]
+#   name = "Posts"
+#   url = "#posts"
+#   weight = 20
+
 [[main]]
   name = "Posts"
-  url = "#posts"
+  url = "post/"
   weight = 20
 
-[[main]]
-  name = "Projects"
-  url = "#projects"
-  weight = 30
+#[[main]]
+#  name = "Projects"
+#  url = "#projects"
+#  weight = 30
 
-[[main]]
-  name = "Publications"
-  url = "#featured"
-  weight = 40
+#[[main]]
+#  name = "Publications"
+#  url = "#featured"
+#  weight = 40
 
 [[main]]
   name = "Courses"
@@ -29,9 +34,49 @@
   weight = 50
 
 [[main]]
-  name = "Contact"
-  url = "#contact"
+  name = "Python"
+  parent = "Courses"
+  pre = "<i class=\"fab fa-python\" style=\"color: #fff;\"></i> "
+  url = "courses/python/"
+  weight = 10
+
+[[main]]
+  name = "R"
+  parent = "Courses"
+  pre = "<i class=\"fab fa-r-project\" style=\"color: #fff;\"></i> "
+  url = "courses/r/"
+  weight = 20
+
+[[main]]
+  name = "Git"
+  parent = "Courses"
+  pre = "<i class=\"fas fa-code-branch\" style=\"color: #fff;\"></i> "
+  url = "courses/git/"
+  weight = 30
+
+[[main]]
+  name = "Hobbies"
+  url = "hobbies/"
   weight = 60
+
+[[main]]
+  name = "SCUBA Diving"
+  parent = "Hobbies"
+  pre = "<i class=\"fas fa-fish\" style=\"color: #fff;\"></i> "
+  url = "hobbies/scuba"
+  weight = 10
+
+[[main]]
+  name = "Photography"
+  parent = "Hobbies"
+  pre = "<i class=\"fas fa-camera\" style=\"color: #fff;\"></i> "
+  url = "hobbies/photography"
+  weight = 20
+
+#[[main]]
+#  name = "Contact"
+#  url = "#contact"
+#  weight = 70
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.

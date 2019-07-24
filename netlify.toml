@@ -1,5 +1,6 @@
 [build]
-  publish = "public"
+  # publish = "public"
+  publish = "chendaniely.github.io"
   command = "hugo"
 [context.production.environment]
   HUGO_VERSION = "0.55.6"

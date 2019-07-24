@@ -2,6 +2,8 @@
 header:
   caption: ""
   image: ""
-title: Posts
-view: 3
+layout: docs
+title: Hobbies
 ---
+
+Things I do.
