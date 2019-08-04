@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "#rstatsnyc as told by @brookLYNevery1, @dataandme, and autographs"
+title:  "rstatsnyc as told by @brookLYNevery1, @dataandme, and autographs"
 subtitle: "An ongoing set up updates about what happened at the 2018 NYC R Conference"
 date:   2018-04-22
 
