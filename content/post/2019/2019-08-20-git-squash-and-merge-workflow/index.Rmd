@@ -46,7 +46,7 @@ you'll have to `rebase` or `cherry-pick` to update the branches after a branch g
 
 # The general problem
 
-```
+```markdown
 m1-m2-m3 # the master branch
        \
         x11-x12-x13 # example branch_1
@@ -56,7 +56,7 @@ m1-m2-m3 # the master branch
 
 After a squash and merge the Git DAG looks like this
 
-```
+```markdown
 m1-m2-m3-s1 # master branch + squash-merge
        \
         x11-x12-x13 # commits from branch_1 still exist
@@ -78,7 +78,7 @@ git rebase master
 # so many conflicts
 ```
 
-```
+```markdown
 m1-m2-m3-s1 # master branch + squash-merge
           \
            x11-x12-x13-y21-y22-y23 # commits from branch_1 and branch_2
@@ -93,7 +93,7 @@ git cherry-pick y21^..y23 # this is how to cherry-pick multiple commits
 # (note the ^ to also include commit y21, otherwise it is left exclusive)
 ```
 
-```
+```markdown
 m1-m2-m3-s1 # master branch + squash-merge
        \  \
         \  y21-y22-y23 # cherry-pick commits from branch_2 # this is good
@@ -107,7 +107,7 @@ note you have to use a force delete with the `-D` flag,
 because git does not think that `branch_1` was merged because we did a squash+merge.
 Otherwise you would've been able to use the lowercase `-d` flag to delete the branch.
 
-```
+```markdown
 m1-m2-m3-s1 # master branch + squash-merge
           \
            y21-y22-y23 # cherry-pick commits from branch_2 # yay!
@@ -138,7 +138,7 @@ Output of my `git log --oneline --graph --decorate --all`, which I have aliased 
 
 Here's the current state we're in after we perform a squash+merge on GitHub
 
-```
+```markdown
               vignettes
              /
 older_commits
@@ -148,7 +148,7 @@ older_commits
 
 Here's what the actual state of the repository looks like.
 
-```
+```console
 dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:51:06] $ git l
 * 16f4b6b (HEAD -> vignettes) intro to gradethis for learnr docs
@@ -172,7 +172,7 @@ dchen@longclaw [~/git/hub/gradethis]  (vignettes)
 
 What we want is something like this:
 
-```
+```markdown
 older_commits
              \
               master
@@ -182,7 +182,7 @@ older_commits
 
 First we pull and update `master`
 
-```
+```console
 dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:51:18] $ git pull origin master
 From github.com:rstudio-education/gradethis
@@ -195,7 +195,7 @@ Fast-forward
 
 Now that master is up to date,
 
-```
+```markdown
               vignettes
              /
 older_commits
@@ -205,7 +205,7 @@ older_commits
 
 we can cherry-pick the commits of interest
 
-```
+```console
 dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:51:30] $ git cherry-pick f66aa39^..16f4b6b
 [master 28c7ebe] i don't want to stash
@@ -236,13 +236,13 @@ So we need to do update where our branches are pointing to by using `git reset -
 
 First we checkout the `vignettes` branch,
 
-```
+```console
 dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:51:46] $ git checkout vignettes 
 Switched to branch 'vignettes'
 ```
 
-```
+```console
 dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:51:52] $ git l
 * 846bb18 (master) intro to gradethis for learnr docs
@@ -270,7 +270,7 @@ dchen@longclaw [~/git/hub/gradethis]  (vignettes)
 
 and then set it to the correct commit location.
 
-```
+```console
 dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:52:04] $ git reset --hard 846bb18
 HEAD is now at 846bb18 intro to gradethis for learnr docs
@@ -280,7 +280,7 @@ We then repeat the process for the `master` branch.
 
 First `checkout master`
 
-```
+```console
 dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:52:07] $ git checkout master
 Switched to branch 'master'
@@ -290,7 +290,7 @@ Your branch is ahead of 'origin/master' by 3 commits.
 
 Then `reset --hard` to the correct location:
 
-```
+```console
 dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:52:11] $ git reset --hard a195fa3
 HEAD is now at a195fa3 fix gradethis demo (#70)
@@ -298,7 +298,7 @@ HEAD is now at a195fa3 fix gradethis demo (#70)
 
 Now everything is in the right place
 
-```
+```markdown
 older_commits
              \
               master
@@ -306,7 +306,7 @@ older_commits
                      vignettes
 ```
 
-```
+```console
 dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:52:21] $ git l
 * 846bb18 (vignettes) intro to gradethis for learnr docs
@@ -332,13 +332,13 @@ dchen@longclaw [~/git/hub/gradethis]  (master)
 Finally, we can update the GitHub remote by force bushing the branch
 (remember to be on the branch before pushing).
 
-```
+```console
 dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:53:25] $ git checkout vignettes 
 Switched to branch 'vignettes'
 ```
 
-```
+```console
 dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:53:30] $ git push -f origin vignettes 
 Enumerating objects: 15, done.
@@ -354,7 +354,7 @@ To github.com:rstudio-education/gradethis.git
  
 The final Graph now looks like this
 
-```
+```console
 dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:54:13] $ git l
 * 846bb18 (HEAD -> vignettes, origin/vignettes) intro to gradethis for learnr docs
@@ -385,12 +385,12 @@ and led to fewer merge conflicts.
 Again, the notation for `cherry-pick` is weird, in that it is *left exclusive* unless you put in the `^`,
 i.e.,
 
-```
+```bash
 git cherry-pick <commit-start>^..<commit-end>
 ```
 
 not
 
-```
+```bash
 git cherry-pick <commit-start>..<commit-end>
 ```
