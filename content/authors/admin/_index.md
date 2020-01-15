@@ -16,7 +16,7 @@ education:
 email: "chendaniely@gmail.com"
 interests:
 - Education
-- Teaching data science skills
+- Data science
 - R
 - Python
 - Leaving the world in a better place
@@ -56,18 +56,15 @@ user_groups:
 I am a PhD student at Virginia Tech (VT) in
 Genetics, Bioinformatics, and Computational Biology ([GBCB][gbcb])
 working with
-[Anne Brown](https://bevanbrownlab.com/)
-bringing data science skills to medical practitioners so they can
-process data for medical research,
-better communicate with biostatisticians,
-interpret models,
-and make necessary changes as needed.
+[Anne Brown][bbl] and
+[DataBridge][db]
+studying data science education and pedagogyfor medicial practitioners.
 
 Former [RStudio](https://www.rstudio.com/)
 [intern](https://blog.rstudio.com/2019/03/25/summer-interns-2019/)
 working on the [gradethis](https://github.com/rstudio-education/gradethis) package.
 
-[Arch Linux][arch] user who maintains the
+[Arch Linux][arch] user maintaining the
 [RStudio Preview][aur-rstudio],
 [nteract][aur-nteract], and
 [Rodeo][aur-rodeo]
@@ -75,10 +72,15 @@ packages in the [AUR][aur].
 
 Author of [Pandas for Everyone](https://amzn.to/2lX2VOK).
 
-
-Enjoys: photography, curling, snowboarding, and scuba diving into caves.
+Enjoys:
+[photography](./hobbies/photography/),
+curling,
+snowboarding,
+and [scuba diving](./hobbies/scuba/) into caves.
 
 [gbcb]: http://gbcb.vbi.vt.edu/
+[bbl]: https://bevanbrownlab.com/bevan-brown-bio
+[db]: https://www.databridge.dev/
 
 [arch]: https://www.archlinux.org/
 [aur]: https://aur.archlinux.org/
