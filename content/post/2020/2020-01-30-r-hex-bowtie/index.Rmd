@@ -160,7 +160,7 @@ workshop.
 I started teaching as an instructor for
 [The Carpentries](https://carpentries.org/).
 Which eventually led me to writing my book,
-[Pandas for Everyone](https://www.amazon.com/Pandas-Everyone-Analysis-Addison-Wesley-Analytics-ebook/dp/B0789WKTKJ`)!
+[Pandas for Everyone](https://www.amazon.com/Pandas-Everyone-Analysis-Addison-Wesley-Analytics-ebook/dp/B0789WKTKJ)!
 
 
 Hope you enjoyed reading about my conference badge!
