@@ -19,6 +19,7 @@ image:
 projects: []
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 
 
@@ -143,10 +144,10 @@ collapse_rows_dt &lt;- data.frame(C1 = c(rep(&quot;a&quot;, 3), rep(&quot;b&quot
 collapse_rows_dt</code></pre>
 <pre><code>##   C1 C2 C3 C4
 ## 1  a  c  1  1
-## 2  a  c  2  1
+## 2  a  c  2  0
 ## 3  a  d  3  0
-## 4  b  c  4  0
-## 5  b  d  5  0</code></pre>
+## 4  b  c  4  1
+## 5  b  d  5  1</code></pre>
 <pre class="r"><code>kable(collapse_rows_dt, align = &quot;c&quot;) %&gt;%
   kable_styling(full_width = F) %&gt;%
   column_spec(1, bold = T) %&gt;%
@@ -188,7 +189,7 @@ c
 2
 </td>
 <td style="text-align:center;">
-1
+0
 </td>
 </tr>
 <tr>
@@ -213,7 +214,7 @@ c
 4
 </td>
 <td style="text-align:center;">
-0
+1
 </td>
 </tr>
 <tr>
@@ -224,7 +225,7 @@ d
 5
 </td>
 <td style="text-align:center;">
-0
+1
 </td>
 </tr>
 </tbody>
