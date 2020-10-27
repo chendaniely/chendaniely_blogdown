@@ -21,6 +21,7 @@ projects: []
 
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
 
 <p>I’m at the <a href="https://r-medicine.com/">R/Medicine</a> conference (no it’s not a Reddit thing) and
@@ -102,12 +103,12 @@ model_outputs</code></pre>
 <pre><code>## # A tibble: 5 x 17
 ##   term  estimate.x std.error.x statistic.x p.value.x estimate.y std.error.y
 ##   &lt;chr&gt;      &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;
-## 1 (Int…      0.920     0.160          5.76  2.53e- 8     0.933      0.174  
-## 2 tota…      0.105     0.00736       14.3   6.69e-34     0.105      0.00746
-## 3 sexM…     NA        NA             NA    NA           -0.0266     0.138  
-## 4 smok…     NA        NA             NA    NA           NA         NA      
+## 1 (Int~      0.920     0.160          5.76  2.53e- 8     0.933      0.174  
+## 2 tota~      0.105     0.00736       14.3   6.69e-34     0.105      0.00746
+## 3 sexM~     NA        NA             NA    NA           -0.0266     0.138  
+## 4 smok~     NA        NA             NA    NA           NA         NA      
 ## 5 size      NA        NA             NA    NA           NA         NA      
-## # … with 10 more variables: statistic.y &lt;dbl&gt;, p.value.y &lt;dbl&gt;,
+## # ... with 10 more variables: statistic.y &lt;dbl&gt;, p.value.y &lt;dbl&gt;,
 ## #   estimate.x.x &lt;dbl&gt;, std.error.x.x &lt;dbl&gt;, statistic.x.x &lt;dbl&gt;,
 ## #   p.value.x.x &lt;dbl&gt;, estimate.y.y &lt;dbl&gt;, std.error.y.y &lt;dbl&gt;,
 ## #   statistic.y.y &lt;dbl&gt;, p.value.y.y &lt;dbl&gt;</code></pre>
@@ -143,9 +144,9 @@ collapse_rows_dt &lt;- data.frame(C1 = c(rep(&quot;a&quot;, 3), rep(&quot;b&quot
                                C4 = sample(c(0,1), 5, replace = TRUE))
 collapse_rows_dt</code></pre>
 <pre><code>##   C1 C2 C3 C4
-## 1  a  c  1  1
+## 1  a  c  1  0
 ## 2  a  c  2  0
-## 3  a  d  3  0
+## 3  a  d  3  1
 ## 4  b  c  4  1
 ## 5  b  d  5  1</code></pre>
 <pre class="r"><code>kable(collapse_rows_dt, align = &quot;c&quot;) %&gt;%
@@ -181,7 +182,7 @@ c
 1
 </td>
 <td style="text-align:center;">
-1
+0
 </td>
 </tr>
 <tr>
@@ -200,7 +201,7 @@ d
 3
 </td>
 <td style="text-align:center;">
-0
+1
 </td>
 </tr>
 <tr>
@@ -390,7 +391,7 @@ tidy_tables</code></pre>
 ##  8 (Intercept) std.error  0.174       2
 ##  9 total_bill  std.error  0.00746     2
 ## 10 sexMale     std.error  0.138       2
-## # … with 16 more rows</code></pre>
+## # ... with 16 more rows</code></pre>
 <p>Almost there!</p>
 <p>Lastly, we need to sort the columns by using <code>arrange</code>.
 Here is where the ID column, <code>mod</code> get’s used to make sure model values are traveling together.</p>
