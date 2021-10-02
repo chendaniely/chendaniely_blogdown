@@ -7,7 +7,7 @@ description: |
   Genetics, Bioinformatics, and Computational Biology
   studying data science education in the medical and biomedical sciences.
   
-  Author of [*Pandas for Everyone*]().
+  Author of [*Pandas for Everyone*](https://smile.amazon.com/Pandas-Everyone-Analysis-Addison-Wesley-Analytics-ebook/dp/B0789WKTKJ).
 image_left: false
 images:
 - img/me2.jpg
