@@ -33,7 +33,7 @@ enableEmoji = true
   description = "Perpetually under construction."
   favicon = "/img/favicon.ico"
   logo = "/img/blogophonic-mark-dark.png"
-  mainSections = ["blog", "project", "talk"]
+  mainSections = ["blog", "project"]
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -153,16 +153,16 @@ enableEmoji = true
     title = "Project Portfolio"
     url = "/project/"
     weight = 3
-  [[menu.header]]
-    name = "Talks"
-    title = "Talks"
-    url = "/talk/"
-    weight = 4
-  [[menu.header]]
-    name = "Dissertation"
-    title = "Dissertation"
-    url = "/dissertation/"
-    weight = 5
+  #[[menu.header]]
+  #  name = "Talks"
+  #  title = "Talks"
+  #  url = "/talk/"
+  #  weight = 4
+  #[[menu.header]]
+  #  name = "Dissertation"
+  #  title = "Dissertation"
+  #  url = "/dissertation/"
+  #  weight = 5
   #[[menu.header]]
   #  name = "A collection"
   #  title = "A collection"
