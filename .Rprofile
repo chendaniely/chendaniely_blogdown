@@ -1,3 +1,4 @@
+options(blogdown.hugo.version = "0.88.1")
 options(blogdown.new_bundle = TRUE)
 
 options(blogdown.author = "Daniel Chen",
